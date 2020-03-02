@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <script>
+    	function validateForm() {
+		  var x = document.forms["formulario"]["id"].value;
+		  if (!(parseFloat(x)>0 && parseFloat(x)<10000000)) {
+		    alert("Invalid");
+		    return false;
+				 }
+			}
+    </script>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+      <form name="formulario" action="/nuestroServlet" onsubmit="return validateForm()" method="POST">
+    id: <input type="text" name="id" placeholder="Que sea un numero :D" required>
+    <input type="Submit" value="Submit">
+    </form>
+</html>
