@@ -15,10 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author daniel.alfonso-b
- */
+
 @WebServlet(
         urlPatterns = "/RomeroVillamarinServlet"
 )
@@ -51,13 +48,13 @@ public class SampleServletSimilar extends HttpServlet {
                 responseWriter.flush();
             }catch (Exception e){
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                responseWriter.write("Requerimiento inválido.");
+                responseWriter.write("Requerimiento invï¿½lido.");
                 responseWriter.flush();
             }
             
         }else{
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
-            responseWriter.write("Requerimiento inválido.");
+            responseWriter.write("Requerimiento invï¿½lido.");
             responseWriter.flush();
         }   
     }
@@ -89,13 +86,13 @@ public class SampleServletSimilar extends HttpServlet {
                 responseWriter.flush();
             }catch (Exception e){
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                responseWriter.write("Requerimiento inválido.");
+                responseWriter.write("Requerimiento invï¿½lido.");
                 responseWriter.flush();
             }
             
         }else{
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
-            responseWriter.write("Requerimiento inválido.");
+            responseWriter.write("Requerimiento invï¿½lido.");
             responseWriter.flush();
         }     
     }
