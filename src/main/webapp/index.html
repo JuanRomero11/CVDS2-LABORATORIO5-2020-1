@@ -3,21 +3,27 @@
     <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function validateForm(){
+                var num = document.forms["myForm"]["num"].value;
+                if (isNaN(num)){
+                    alert("No es un número");
+
+                } else{
+                    alert("Es un número");
+
+                }
+                return false;
+            }
+        </script>
+        <link rel="shortcut icon" href="pingui.png" />
     </head>
-    <script>
-    	function validateForm() {
-		  var x = document.forms["formulario"]["id"].value;
-		  if (!(parseFloat(x)>0 && parseFloat(x)<10000000)) {
-		    alert("Invalid");
-		    return false;
-				 }
-			}
-    </script>
     <body>
-        <h1>Hello World!</h1>
+		<h1>Hello World!</h1>
+        <form name="myForm" action="/laHeredada" onsubmit = "return(validateForm());" method="post">
+            <label for="num">Ingrese un número:</label>
+            <input type="text" id="num" name="num"><br><br>
+            <input type="submit" value="Enviar">
+        </form>
     </body>
-      <form name="formulario" action="/nuestroServlet" onsubmit="return validateForm()" method="POST">
-    id: <input type="text" name="id" placeholder="Que sea un numero :D" required>
-    <input type="Submit" value="Submit">
-    </form>
 </html>
